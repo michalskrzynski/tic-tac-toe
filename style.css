@@ -1,0 +1,66 @@
+:root {
+  --board-box-size: 160px;
+}
+
+body {
+  font-size: 20px;
+  font-family: 'Nerko One', cursive;
+
+  margin: 0;
+}
+
+#menu {
+  margin-left: auto;
+  display: flex;
+}
+
+#menu div {
+  margin: 1rem 2rem;
+}
+
+#logo {
+  margin-left: 2rem;
+  font-size: 3rem;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+.margined {
+  margin-bottom: 2rem;
+}
+
+.container {
+  display: flex;
+
+  align-items: center;
+}
+
+.left {
+  margin-right: auto;
+}
+
+.right {
+  margin-left: auto;
+}
+
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, var(--board-box-size) );
+  grid-template-rows: repeat(3, var(--board-box-size));
+
+  /* gap: 1rem; */
+}
+
+.ttt-board div {
+  font-size: 2rem;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.leftmost { border-left: 0 !important; }
+.rightmost { border-right: 0 !important; }
+.topmost { border-top: 0 !important; }
+.bottommost { border-bottom: 0 !important; }
