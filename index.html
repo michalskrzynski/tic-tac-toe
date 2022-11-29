@@ -14,24 +14,43 @@
   <div class="container dark margined">
     <div id="logo">Tic-Tac-Toe</div>
     <div id="menu">
+      <div id="newGame" onClick="restartGame()">New Game</div>
       <div id="ai">AI</div>
       <div id="difficulty">Easy / Hard</div>
     </div>
   </div>
   <div class="container"> 
     <div class="left"></div>
-    <div class="ttt-board">
-      <div id="pos0" class="leftmost topmost">O</div>
-      <div id="pos1" class="topmost">X</div>
-      <div id="pos2" class="rightmost topmost">O</div>
-      <div id="pos3" class="leftmost">X</div>
-      <div id="pos4">O</div>
-      <div id="pos5" class="rightmost">X</div>
-      <div id="pos6" class="leftmost bottommost">O</div>
-      <div id="pos7" class="bottommost"></div>
-      <div id="pos8" class="rightmost bottommost"></div>
+    <div>
+      <div id="tttProgress" class="dark">
+        Turn: player X
+      </div>
+      <div id="tttBoard">
+        <div id="tttField0" class="leftmost topmost"></div>
+        <div id="tttField1" class="topmost"></div>
+        <div id="tttField2" class="rightmost topmost"></div>
+        <div id="tttField3" class="leftmost"></div>
+        <div id="tttField4"></div>
+        <div id="tttField5" class="rightmost"></div>
+        <div id="tttField6" class="leftmost bottommost"></div>
+        <div id="tttField7" class="bottommost"></div>
+        <div id="tttField8" class="rightmost bottommost"></div>
+      </div>
     </div>
     <div class="right"></div>
   </div>
+
+  <script src="game.js"></script>
+  <script src="board.js"></script>
+  <script>
+    function restartGame() {
+      let game = gameFactory();
+      boardModule.hookGame( game );
+      boardModule.clean();
+    } 
+
+    boardModule.initialize();
+    restartGame();
+  </script>
 </body>
 </html>

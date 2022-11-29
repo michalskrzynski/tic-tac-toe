@@ -46,7 +46,14 @@ body {
   margin-left: auto;
 }
 
-.ttt-board {
+#tttProgress {
+  border-radius: 1rem;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+#tttBoard {
   display: grid;
   grid-template-columns: repeat(3, var(--board-box-size) );
   grid-template-rows: repeat(3, var(--board-box-size));
@@ -54,10 +61,12 @@ body {
   /* gap: 1rem; */
 }
 
-.ttt-board div {
+#tttBoard div {
   font-size: 2rem;
   text-align: center;
   border: 1px solid black;
+
+  position: relative;
 }
 
 .leftmost { border-left: 0 !important; }
