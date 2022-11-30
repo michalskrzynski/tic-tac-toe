@@ -3,7 +3,6 @@ const gameFactory = () => {
   const fields = [0,1,2].map( e => Array(3).fill( null ));
 
   const canPlace = ( y, x ) => {
-    console.log( fields );
     return fields[y][x] === null;
   }
 
@@ -35,5 +34,9 @@ const gameFactory = () => {
     return false;
   }
 
-  return { canPlace, place, isWon };
+  const areAllMovesMade = () => {
+    return fields.flat().every( p => p !== null );
+  }
+
+  return { canPlace, place, isWon, areAllMovesMade };
 }

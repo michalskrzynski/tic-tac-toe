@@ -46,7 +46,7 @@ body {
   margin-left: auto;
 }
 
-#tttProgress {
+#tttMonitor {
   border-radius: 1rem;
   text-align: center;
   padding: 1rem;
@@ -61,12 +61,13 @@ body {
   /* gap: 1rem; */
 }
 
-#tttBoard div {
-  font-size: 2rem;
-  text-align: center;
-  border: 1px solid black;
+#tttBoard > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  position: relative;
+  font-size: 8rem;
+  border: 1px solid black;
 }
 
 .leftmost { border-left: 0 !important; }
